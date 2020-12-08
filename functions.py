@@ -3,6 +3,7 @@ import fake_useragent
 import requests
 from nltk import tokenize
 from googletrans import Translator
+from config import access_token
 
 translator = Translator()
 
@@ -47,7 +48,7 @@ def make_post_string(mix):
 
 
 def make_post_vk(text):
-    data = {'access_token': "a312c2c4514b147e3f4099120995a99383d34a3cfa7d51ef7d4334d61e725a9d370a98d2a20b32b01769e",
+    data = {'access_token': access_token,
             'owner_id': -199738353,
             'from_group': 1,
             'message': text,
